@@ -8,6 +8,20 @@ $(window).on('load', function() {
   var completePoints = false;
   var completePolygons = false;
   var completePolylines = false;
+  
+  var nanjing_1938 = L.tileLayer('https://mapwarper.net/maps/tile/53396/{z}/{x}/{y}.png', {
+    attribution:'Tiles by <a href="http://mapwarper.net/maps/53396">Map Warper user Qiuzi Guo</a>'
+  });
+
+  var nanjing_1935 = L.tileLayer('https://mapwarper.net/maps/tile/53347/{z}/{x}/{y}.png', {
+    attribution:'Tiles by <a href="http://mapwarper.net/maps/53347">Map Warper user Qiuzi Guo</a>'
+   });
+
+  var basemaps = {};
+
+  var layerControl = L.control.layers(basemaps,{position:'bottomright'}).addTo(map);
+  layerControl.addOverlay(nanjing_1935,'Nanjing 1935 Map');
+  layerControl.addOverlay(nanjing_1938,'Nanjing 1938 Map');
 
   /**
    * Returns an Awesome marker with specified parameters
