@@ -86,11 +86,13 @@
       attribution:'Tiles by <a href="http://mapwarper.net/maps/53347">Map Warper user Qiuzi Guo</a>'
     });
 
-    var basemaps = {};
+    var basemaps = {
+      'Nanjing 1935 Map': nanjing_1935,
+      'Nanjing 1938 Map': nanjing_1938,
+    };
 
     var layerControl = L.control.layers(null,basemaps,{collapsed:false,position:'bottomright'}).addTo(map);
-    layerControl.addOverlay(nanjing_1935,'Nanjing 1935 Map');
-    layerControl.addOverlay(nanjing_1938,'Nanjing 1938 Map');
+
   
   </script>
 
